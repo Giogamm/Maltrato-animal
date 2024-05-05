@@ -86,10 +86,14 @@ height: 90px;
     height: 100%;
 }
 
+.navbar{
+  /* para que se expanda al 100% y no haya interferencia */
+  height: 100%;
+}
   
 
   .navbar .container {
-  
+
     flex-direction: column;
     align-items: flex-start;
   }
