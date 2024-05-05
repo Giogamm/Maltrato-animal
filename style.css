@@ -14,7 +14,39 @@ h2, p{
     text-align: center;
     padding: 20px;
 }
+section img {
+  height: 180px;
+  margin: 0 auto;
+  display: block;
+  opacity: 0; /* Agregamos esta línea para que las imágenes comiencen con opacidad 0 */
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
+}
 
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+hr{
+ background-color: black;
+ border: 1px solid;
+}
+
+main ul{
+  display: grid;
+  justify-content: center;
+  padding-bottom: 20px;
+}
 
 /* 
 Todo aqui son clases 
@@ -24,19 +56,32 @@ Todo aqui son clases
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  overflow: hidden;
+
   box-shadow: 0 0 10px rgba(23, 18, 18, 0.1);
   border-radius: 5px;
   height: 100%;
 
 }
 
+
+
+
 .navbar {
   background-color: #bdbdbd;
   padding: 10px 0px;
   box-shadow: 0 0 20px rgba(23, 18, 18, 0.1);
 height: 90px;
-  /* position: sticky; */
+  animation: enhance-header linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 150px;
+}
+@keyframes enhance-header {
+  to{
+    
+    background-color: rgb(87, 85, 85);
+
+  }
+  
 }
 
 .navbar .container {
@@ -44,6 +89,12 @@ height: 90px;
   justify-content: space-between;
   align-items: center;
   max-width: 1320px;
+
+}
+
+.activa{
+  background-color: #818181;
+  border-radius: 5px;
 }
 
 .nav-menu {
@@ -72,9 +123,18 @@ height: 90px;
   border-color: #6a6a6a;
   box-shadow: 3px 3px 10px black;
 }
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+    display: grid;
+  place-items: center;
+  padding-top: 10px;
+}
+
 
 /* 
-*mediaquerys
+!mediaquerys
 */
 
 @media screen and (max-width: 768px) {
