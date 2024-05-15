@@ -23,7 +23,7 @@
 
 
 
-            <section> <img src="img/animal maltratado, 1.jpg" alt=""></section>
+            <section> <img src="img/animal maltratado, 1.svg" alt=""></section>
             <br>
             <hr>
             <h2>¿Qué es el maltrato animal?</h2>
