@@ -65,18 +65,21 @@ Todo aqui son clases
 
 }
 
+.empuje{
+  display: block;
+  height: 90px;
+}
 
 .navbar {
-  position: fixed;
+
+ position: fixed;
   background-color: #bdbdbd;
   padding: 10px 0px;
   box-shadow: 0 0 20px rgba(23, 18, 18, 0.1);
 height: 90px;
- 
-
-  animation-range: 0 150px;
   width: 100%;
   z-index: 10;
+
 }
 
 
