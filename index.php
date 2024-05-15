@@ -7,7 +7,7 @@
     <meta name="description" content="Pagina para apoyar en contra del maltrato animal">
     <meta name="author" content="Giovany Galeana Memije">
     <link rel="shortcut icon" href="img/pata, logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="script.js"></script>
     <title>Maltrato animal: Crueldad hacia los animales</title>
 </head>
