@@ -1,39 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pagina para apoyar en contra del maltrato animal">
-    <meta name="author" content="Giovany Galeana Memije">
-    <link rel="shortcut icon" href="img/pata, logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Maltrato animal: Crueldad hacia los animales</title>
-</head>
-
-
-<header>
-
-    <nav class="navbar">
-        <div class="container">
-            <ul class="nav-menu">
-
-                <h1>Maltrato animal</h1>
-                <li><a href="index.html" class="activa">Inicio</a></li>
-                <li><a href="html/formas-de-maltrato-animal.html">Formas de maltrato animal</a></li>
-                <li><a href="html/ayudar.html">¿Como ayudar?</a></li>
-                <li><a href="poner aqui sobre los animales">Animales perdidos</a></li>
-                <li><a href="poner aqui algo">Iniciar sesión</a></li>
-            </ul>
-        </div>
-    </nav>
-<div class="empuje">
-
-</div>
-</header>
-
-
 <body>
     <div class="container">
         <main>
@@ -120,11 +84,4 @@
                 las consideraciones y medidas que sean necesarias por ella y las personas.</p>
         </main>
     </div>
-
-
-    <footer>
-        <p>&copy; Maltrato animal: Crueldad hacia los animales. Todos los derechos reservados</p>
-    </footer>
 </body>
-
-</html>
