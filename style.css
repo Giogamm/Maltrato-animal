@@ -69,6 +69,7 @@ Todo aqui son clases
  position: fixed;
   cursor: pointer;
   height: 30px;
+  display: none;
 }
 
 .overlay-content {
@@ -129,6 +130,7 @@ height: 90px;
   animation-timeline: scroll(root);
   animation-range: 0 150px;
 }
+
 @keyframes enhance-header {
   to{
     
@@ -194,8 +196,11 @@ height: 90px;
 @media screen and (max-width: 768px) {
   .img-overlay {
     display: block; /* El botón del menú se muestra cuando el ancho de la pantalla es de 600px o menos */
+    top: 12px;
+    left: 7px;
   }
 
+ 
 
 .container{
 /* 
@@ -220,6 +225,11 @@ height: 90px;
     flex-direction: column;
    gap: 15px;
    padding-bottom: 20px;
+  }
+
+ .navbar {
+    display: none;
+    visibility: hidden;
   }
 
 }
