@@ -68,7 +68,7 @@ Todo aqui son clases
 .img-overlay{
  position: fixed;
   cursor: pointer;
-  float: right;
+  height: 30px;
 }
 
 .overlay-content {
