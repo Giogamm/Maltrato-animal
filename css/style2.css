@@ -27,7 +27,22 @@ li{
 }
 
 
-/* todo abajo de aqui son clases */
+/* todo abajo de aquí son clases */
+
+.denuncia{
+ 
+  color: black;
+ text-decoration: underline;
+}
+
+.img-formas-de-ayudar{
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+
+}
+
 .lista{
     display: grid;
     justify-content: center;
