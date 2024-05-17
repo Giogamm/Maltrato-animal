@@ -133,6 +133,7 @@ height: 90px;
   background-color: #969696;
   border-color: #6a6a6a;
   box-shadow: 3px 3px 10px black;
+   scale: 2;
 }
 .footer {
   background-color: #333;
