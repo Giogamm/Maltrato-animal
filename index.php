@@ -9,7 +9,6 @@
     <meta name="keywords" content="maltrato animal, crueldad, animales, protección animal, zihuatanejo">
     <link rel="shortcut icon" href="img/pata, logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <script src="script.js"></script>
     <title>Maltrato animal: Crueldad hacia los animales</title>
 </head>
 
