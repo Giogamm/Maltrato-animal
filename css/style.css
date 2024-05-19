@@ -11,7 +11,7 @@ body {
 body li{
  
   
-
+    padding: 5px;
    list-style-position: inside;
 
 }
