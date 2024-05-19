@@ -30,7 +30,7 @@ background-size: cover;
 
 de fondo o si hay problemas para cargarla */
 
-background-color: #66999;
+
 
 }
 
@@ -47,7 +47,7 @@ body::after {
   filter: blur(10px);
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 768px) {
  body::after {
     background-image: url("../img/fondo-inicio-sesion-celular.jpg");
   }
