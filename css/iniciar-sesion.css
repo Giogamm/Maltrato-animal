@@ -6,7 +6,7 @@ body {
   padding: 0;
   height: 100vh;
 background-color: black;
-    background-size: cover;
+
 
 /* Para dejar la imagen de fondo centrada, vertical y
 
@@ -47,6 +47,7 @@ body::after {
   height: 100%;
   z-index: -1;
   filter: blur(10px);
+
 }
 
 a{
