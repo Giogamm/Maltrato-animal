@@ -8,7 +8,5 @@
     <link rel="stylesheet" href="css/registrarse.css">
     <title>Registrarse</title>
 </head>
-<?php
-    include 'sections/section-registrarse.php';
-?>
+<?php  require_once 'php/sections/section-registrarse.php'; ?>
 </html>

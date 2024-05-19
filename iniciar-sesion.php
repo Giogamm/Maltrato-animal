@@ -10,6 +10,6 @@
     <title>Iniciar sesión</title>
 </head>
 
-<?php include 'sections/section-iniciar-sesion.php'; ?>
+<?php  require_once 'php/sections/section-iniciar-sesion.php'; ?>
 
 </html>

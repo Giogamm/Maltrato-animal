@@ -7,7 +7,7 @@
             <input type="submit" value="Iniciar sesión" class="submit-sesion" id="iniciar-sesion">
             <span>¿no tienes cuenta? <a href="registrarse.php">registrate</a></span>
         </form>
-        <h3><a href="../index.php">Regresar</a></h3>
+        <h3><a href="index.php">Regresar</a></h3>
     </div>
 </body>
 

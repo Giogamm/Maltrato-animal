@@ -163,6 +163,7 @@ a{
 @media screen and (max-width: 768px) {
  body::after {
     background-image: url("../img/fondo-inicio-sesion-celular.jpg");
+    
   }
   .registrarse{
      width: 300px;
