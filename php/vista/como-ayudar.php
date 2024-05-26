@@ -8,13 +8,13 @@
     <meta name="description"
         content="En esta pagina aprenderás cómo puedes ayudar a combatir el maltrato animal y contribuir a crear un mundo mejor para ellos.">
     <meta name="keywords" content="maltrato animal, ayuda, animales, protección, derechos">
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="../../css/style2.css">
     <title>Maltrato animal: ¿Cómo ayudar?</title>
 </head>
-<?php 
-include_once 'php/sections/header.php';
-include_once 'php/sections/body-como-ayudar.php';
-include_once 'php/sections/footer.php';
+<?php
+require_once 'sections/header.php';
+require_once 'sections/body-formas-de-maltrato-animal.php';
+require_once 'sections/footer.php';
 
 ?>
 

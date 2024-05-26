@@ -53,7 +53,16 @@ a{
     color: #3e9ad3;
 }
 
-
+p{
+    color: black;
+text-align: center;
+margin-bottom: 10px;
+margin-top: 0px;
+background-color: #c4e0f3;
+border-radius: 20px;
+padding: 10px;
+display: none;
+}
 
 .registrarse{
     background-color: #f5f5f5;
@@ -61,9 +70,10 @@ a{
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
-   width: 400px;
-   height: 390px;
+   width: 420px;
+   height: 480px;
    text-align: center;
+   
   
 }
 

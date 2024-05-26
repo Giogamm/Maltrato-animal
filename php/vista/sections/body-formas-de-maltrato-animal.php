@@ -5,7 +5,7 @@
         <p>La ley protege a los animales del maltrato y la crueldad de las personas. Estos actos son delitos y podés
             denunciarlos.</p>
         <p>Ley 14.346</p>
-        <img src="img/pet-14-svgrepo-com.svg" alt="" class="img-formas-de-maltrato-animal">
+        <img src="../../img/pet-14-svgrepo-com.svg" alt="" class="img-formas-de-maltrato-animal">
         <h3>formas de maltrato animal</h3>
         <p>El maltrato animal es un problema que afecta a todo el mundo, y es importante que todos seamos conscientes de
             ello.

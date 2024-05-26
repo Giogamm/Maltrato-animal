@@ -8,14 +8,14 @@
     <meta name="description"
         content="En este articulo se hablara sobre las formas de maltrato animal que existen en la actualidad">
     <meta name="keywords" content="maltrato animal, formas de maltrato, protección animal, zihuatanejo">
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="../../css/style2.css">
     <link rel="shortcut icon" href="img/pata, logo.png" type="image/x-icon">
     <title>Maltrato animal:formas de maltrato</title>
 </head>
 <?php
-require_once 'php/sections/header.php';
-require_once 'php/sections/body-formas-de-maltrato-animal.php';
-require_once 'php/sections/footer.php';
+require_once 'sections/header.php';
+require_once 'sections/body-formas-de-maltrato-animal.php';
+require_once 'sections/footer.php';
 ?>
 
 
