@@ -22,7 +22,7 @@
             si no se venden cuando son cachorros los animales son dejados a su suerte, o los compradores abandonan a sus
             mascotas
             cuando se dan cuenta que no son de “raza pura”.</p>
-        <img src="img/img-formas-de-ayudar.webp" alt="" class="img-formas-de-ayudar">
+        <img src="../../img/img-formas-de-ayudar.webp" alt="" class="img-formas-de-ayudar">
         <h3>1. Adopción definitiva o temporal de mascotas</h3>
         <p>Una de las formas más efectivas de ayudar a los animales es adoptar una mascota. Al adoptar un animal, no
             solo

@@ -13,7 +13,7 @@
 </head>
 <?php
 require_once 'sections/header.php';
-require_once 'sections/body-formas-de-maltrato-animal.php';
+require_once 'sections/body-como-ayudar.php';
 require_once 'sections/footer.php';
 
 ?>
