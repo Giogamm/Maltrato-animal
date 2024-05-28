@@ -15,7 +15,7 @@
 <?php
 
 require_once 'php/vista/sections/header.php';
-require_once 'php/vista/sections/body.php';
+require_once 'php/vista/sections/body.ph';
 require_once 'php/vista/sections/footer.php';
 
 ?>
