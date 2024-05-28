@@ -29,10 +29,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script type='text/javascript'>
             window.onload = function() {
                 document.getElementById('mensajeDeRegistro').style.display = 'block';
+              
                 document.getElementById('mensajeDeRegistro').innerHTML = 'Usuario registrado con éxito';
             }
           </script>";
     } else {
+        
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 

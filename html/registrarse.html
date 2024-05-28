@@ -10,16 +10,29 @@
 </head>
 <body>
     <div class="registrarse">
-        <form action="../php/iniciar-sesion.php" method="POST">
+        <form action="" method="POST">
             <h1>Registrarse</h1>
             <input type="text" name="usuario" placeholder="Usuario" required class="usuario">
             <input type="email" name="correo" placeholder="Correo" class="correo">
             <input type="password" name="contrasena" placeholder="Contraseña" required class="contraseña">
-            <input type="submit" value="Registrarse" class="submit">
+            <p id="mensajeDeRegistro"></p>
+            <input type="submit" value="Registrarse" class="submit" id="btnRegistro">
             <span>¿Ya tiene una cuenta? <a href="iniciar-sesion.html">Iniciar sesión</a></span>
             <h3><a href="../index.php">Regresar</a></h3>
 
         </form>
     </div>
+    <script>
+   var btnRegistro = document.getElementById("btnRegistro")
+      btnRegistro.addEventListener("click", function() {
+     
+     
+        var mensaje = document.getElementById("mensajedeRegistro");
+          mensaje.style.backgroundColor = "#c4e0f3";    
+          mensaje.innerHTML("hola");   
+        });
+
+        
+    </script>
 </body>
 </html>
