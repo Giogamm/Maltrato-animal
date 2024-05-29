@@ -2,7 +2,7 @@
     <div class="registrarse">
         <form action="" method="POST" id="form">
             <h1>Registrarse</h1>
-            <input type="text" name="usuario" placeholder="Usuario" required class="usuario" id="usuarip">
+            <input type="text" name="usuario" placeholder="Usuario" required class="usuario" id="usuario">
             <input type="email" name="correo" placeholder="Correo" class="correo" id="correo">
             <input type="password" name="contrasena" placeholder="Contraseña" required class="contraseña" id="contraseña">
             <input type="password" name="confirmar_contrasena" placeholder="Confirmar contraseña" required class="contraseña" id="confirmar_contraseña">
@@ -13,6 +13,7 @@
         </form>
     </div>
     <script src="../controllers/confirmarContra.js"></script>
+    <script src="../controllers/estilarRegistro.js"></script>
 </body>
 
 <?php

@@ -48,9 +48,16 @@ body::after {
   z-index: -1;
   filter: blur(10px);
 }
+
+
 a{
     text-decoration: none;
     color: #3e9ad3;
+    transition: all 0.2s;
+}
+
+a:hover{
+  color: #4e8cb3;
 }
 
 p{
@@ -82,25 +89,46 @@ display: none;
     width: 90%;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #000000;
-    animation: slide 2s infinite;
+    border: 3px solid #ccc;
+    transition: all 0.3s;
+   
 
 }
 
+
+.usuario:focus{
+  outline: none;
+  border: 3px solid #3e9ad3;
+
+}
+
+
 .correo{
-    margin-bottom: 20px;
-    width: 90%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  margin-bottom: 20px;
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 3px solid #ccc;
+  transition: all 0.3s;
+}
+
+.correo:focus{
+  outline: none;
+  border: 3px solid #3e9ad3;
 }
 
 .contraseña{
-    margin-bottom: 20px;
-    width: 90%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  margin-bottom: 20px;
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 3px solid #ccc;
+  transition: all 0.3s;
+}
+
+.contraseña:focus{
+  outline: none;
+  border: 3px solid #3e9ad3;
 }
 
 
@@ -163,7 +191,7 @@ display: none;
 
 }
 .submit-sesion:hover{
-   background-color: rgb(62, 154, 211);
+   background-color: #3e9ad3;
     color: white;
     scale: 1.1;
     left: -33px;
