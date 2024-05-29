@@ -13,7 +13,6 @@
         </form>
     </div>
     <script src="../controllers/confirmarContra.js"></script>
-    <script src="../controllers/estilarRegistro.js"></script>
 </body>
 
 <?php
