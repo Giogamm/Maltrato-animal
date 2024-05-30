@@ -5,3 +5,7 @@
     height: 120px;
   }
 }
+
+.btn-editar:hover, .btn-danger:hover {
+    transform: scale(1.1);
+}
