@@ -121,12 +121,33 @@ a{
     transition: all 0.3s;
 
 }
-.submit-sesion:hover{
-   background-color: rgb(62, 154, 211);
+
+
+.submit:hover{
+  background-color: #293942;
+
     color: white;
     scale: 1.1;
     left: -33px;
-      animation: pulse-animation-sesion .6s ease-in-out
+      animation: pulse-animation .6s ease-in-out
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(41, 57, 66, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(41, 57, 66, 0);
+ 
+  }
+}
+@keyframes pulse-animation-sesion {
+  0% {
+    box-shadow: 0 0 0 0px rgba(62, 154, 211, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(62, 154, 211, 0);
+  }
 }
 @media screen and (max-width: 768px) {
  body::after {
