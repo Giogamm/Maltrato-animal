@@ -8,6 +8,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
         mensaje.textContent = mensajeError;
         mensaje.style.display = 'block'
         mensaje.style.backgroundColor = "#a34141"; // Cambia el color de fondo del mensaje a rojo
+        mensaje.style.color = "#ffffff";
         event.preventDefault();
     } 
  
