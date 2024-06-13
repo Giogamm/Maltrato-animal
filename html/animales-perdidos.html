@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Giovany Galeana Memije">
+    <meta name="description" content="busca los animales perdidos que se hayan extraviado en tu localidad">
+    <meta name="keywords" content="maltrato animal, ayuda, animales, protección, derechos">
+    <link rel="stylesheet" href="../css/animales-perdidos.css">
+    <title>Maltrato animal: animales perdidos</title>
+</head>
+<body>
+    <div class="container">
+        <a href="../user.php">
+            <img src="../img/userIcon.svg" alt="" class="user-icon">
+        </a>
+
+        <header>
+
+
+            <a href="../index.php">
+            <img src="../img/salida.svg" alt="" class="user-icon">
+</a>
+            <h1>Animales Perdidos</h1>
+            <button id="newPostButton">Realizar una publicación</button>
+        </header>
+        <div id="sortOptions">
+            <label for="sort">Ordenar por:</label>
+            <select id="sort">
+                <option value="recientes">Más recientes</option>
+                <option value="antiguos">Más antiguos</option>
+            </select>
+        </div>
+        <div id="postsContainer">
+
+        
+
+
+
+            <!-- Ejemplo de publicación -->
+            <div class="post">
+                <div class="user-info">
+                    <img src="profile.jpg" alt="Foto de perfil" class="profile-pic">
+                    <div class="user-details">
+                        <h3>Juan Pérez</h3>
+                        <p>Contacto: 123-456-7890</p>
+                    </div>
+                </div>
+                <img src="animal.jpg" alt="Foto del animal perdido" class="animal-pic">
+                <p class="description">Se perdió mi perro cerca del parque central. Es muy amigable y responde al nombre
+                    de Max. Por favor, contáctame si lo has visto.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para nueva publicación -->
+    <div id="postModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Nueva Publicación</h2>
+            <form id="postForm">
+                <label for="contactNumber">Número de contacto:</label>
+                <input type="text" id="contactNumber" name="contactNumber" required>
+                <label for="animalPhoto">Foto del animal:</label>
+                <input type="file" id="animalPhoto" name="animalPhoto" accept="image/*" required>
+                <label for="description">Descripción:</label>
+                <textarea id="description" name="description" required></textarea>
+                <button type="submit">Publicar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

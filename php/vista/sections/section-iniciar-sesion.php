@@ -12,7 +12,7 @@
         <h3><a href="../../index.php">Regresar</a></h3>
     </div>
 </body>
-<!-- !bug sin solucionar, no se inicia sesión en el usuario -->
+
 <?php
 
 ini_set('display_errors', 1);
