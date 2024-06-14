@@ -2,7 +2,7 @@
     <div class="registrarse">
 
         <h1>Iniciar sesión</h1>
-        <form action="iniciar-sesion.php" method="post">
+        <form action="../controllers/login.php" method="post">
             <input type="text" name="usuario" placeholder="Usuario" required class="usuario">
             <input type="password" name="contraseña" placeholder="Contraseña" required class="contraseña">
             <input type="submit" value="Iniciar sesión" class="submit-sesion" id="iniciar-sesion">

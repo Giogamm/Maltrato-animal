@@ -1,3 +1,4 @@
+/* Estilos existentes con ajustes */
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f9fc;
@@ -40,21 +41,26 @@ button:hover {
 }
 
 #postsContainer {
+    max-width: 600px;
+    margin: 20px auto;
     border-top: 1px solid #ccc;
     padding-top: 20px;
 }
 
 .post {
-    border-bottom: 1px solid #ccc;
-    padding: 20px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.post:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .user-info {
@@ -87,12 +93,14 @@ button:hover {
 
 .description {
     margin: 0;
+    margin-bottom: 10px;
 }
 
-#description{
+#description {
     resize: none;
     height: 220px;
 }
+
 .modal {
     display: none; 
     position: fixed; 
@@ -234,12 +242,14 @@ button:hover {
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
     display: grid;
-  place-items: center;
-  padding-top: 10px;
+    place-items: center;
+    padding-top: 10px;
 }
 
-
+img {
+    max-height: 300px;
+}

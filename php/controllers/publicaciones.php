@@ -1,53 +1,34 @@
 <?php
+session_start();
+include '../models/establecerConexión.php';
 
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-include_once '../models/publicaciones.php'; // Incluye la clase Publicacion
-
-// Inicializa la conexión con la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "proyecto_maltrato_animal";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar la conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
-
-session_start(); // Iniciar sesión para el usuario
-
-$publicacion = new Publicacion($conn);
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (!isset($_SESSION['nombre_usuario'])) {
-        echo "Error: No se ha iniciado sesión.";
-        exit();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!isset($_SESSION['username'])) {
+        die('Debes iniciar sesión para realizar una publicación.');
     }
 
-    // Obtén las variables del formulario
-    $contacto = $_POST['contactNumber'];
-    $descripcion = $_POST['description'];
-    $imagen = $_FILES['animalPhoto']; // Asume que se pasa como un archivo
+    $username = $_SESSION['username']; // Obtener el nombre de usuario de la sesión
+    $contactNumber = $_POST['contactNumber'];
+    $description = $_POST['description'];
+    $image = $_FILES['animalPhoto']['tmp_name'];
 
-    // Verificar y mover la imagen a la carpeta de subida
-    $uploadDir = '../uploads/';
-    $uploadFile = $uploadDir . basename($imagen['name']);
-    if (!move_uploaded_file($imagen['tmp_name'], $uploadFile)) {
-        echo "Error al cargar la imagen.";
-        exit();
+    // Verificación del tamaño del archivo
+    if ($_FILES['animalPhoto']['size'] > 5 * 1024 * 1024) {
+        die('La imagen es demasiado grande. Por favor, selecciona una imagen de menos de 5MB.');
     }
 
-    $resultado = $publicacion->crearPublicacion($_SESSION['nombre_usuario'], $contacto, $descripcion, $uploadFile);
+    $imgContent = addslashes(file_get_contents($image));
 
-    if ($resultado) {
-        echo "Publicación realizada correctamente.";
+    $sql = "INSERT INTO publicaciones (usuario_nombre, contacto, descripcion, imagen, fecha_publicacion)
+            VALUES ('$username', '$contactNumber', '$description', '$imgContent', CURRENT_TIMESTAMP)";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Nueva publicación creada con éxito";
     } else {
-        echo "Error al realizar la publicación.";
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
+
+    $conn->close();
+    header("Location: ../vista/animales-perdidos.php");
+    exit();
 }
