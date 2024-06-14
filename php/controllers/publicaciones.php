@@ -4,10 +4,10 @@ include '../models/establecerConexión.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!isset($_SESSION['username'])) {
-        die('Debes iniciar sesión para realizar una publicación.');
+        die('No has iniciado sesión.');
     }
 
-    $username = $_SESSION['username']; // Obtener el nombre de usuario de la sesión
+    $username = $_SESSION['username'];
     $contactNumber = $_POST['contactNumber'];
     $description = $_POST['description'];
     $image = $_FILES['animalPhoto']['tmp_name'];
