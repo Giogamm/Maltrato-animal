@@ -31,7 +31,7 @@
             // Salida de datos para cada fila
             while ($row = $result->fetch_assoc()) {
                 $dateTime = new DateTime($row['fecha_publicacion']);
-                $formattedDate = $dateTime->format('Y-m-d h:i A');
+                $formattedDate = $dateTime->format('d-m-y h:i A');
                 echo "<div class='post'>";
                 echo "<div class='user-info'>";
                 echo '<img src="../../img/person.svg" class="profile-pic" alt="Usuario">'; // Ajusta esta ruta a la imagen de perfil por defecto
