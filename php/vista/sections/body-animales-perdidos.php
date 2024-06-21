@@ -1,3 +1,18 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+require_once '../models/establecerConexión.php';
+
+// Obtener el parámetro de ordenamiento
+$order = isset($_GET['order']) ? $_GET['order'] : 'recientes';
+$orderQuery = $order === 'antiguos' ? 'ORDER BY fecha_publicacion ASC' : 'ORDER BY fecha_publicacion DESC';
+
+$query = "SELECT usuario_nombre, contacto, descripcion, imagen, fecha_publicacion FROM publicaciones $orderQuery";
+$result = $conn->query($query);
+?>
+
 <div class="container">
     <a href="../user.php">
         <img src="../../img/userIcon.svg" alt="" class="user-icon">
@@ -10,23 +25,29 @@
         <h1>Animales Perdidos</h1>
         <button id="newPostButton">Realizar una publicación</button>
     </header>
+
+    <!-- Notificaciones -->
+    <?php
+    if (isset($_SESSION['success_message'])) {
+        echo '<div class="alert">' . $_SESSION['success_message'] . '</div>';
+        unset($_SESSION['success_message']);
+    }
+    if (isset($_SESSION['error_message'])) {
+        echo '<div class="error">' . $_SESSION['error_message'] . '</div>';
+        unset($_SESSION['error_message']);
+    }
+    ?>
+
     <div id="sortOptions">
         <label for="sort">Ordenar por:</label>
-        <select id="sort">
-            <option value="recientes">Más recientes</option>
-            <option value="antiguos">Más antiguos</option>
+        <select id="sort" onchange="sortPosts()">
+            <option value="recientes" <?= isset($_GET['order']) && $_GET['order'] == 'recientes' ? 'selected' : '' ?>>Más recientes</option>
+            <option value="antiguos" <?= isset($_GET['order']) && $_GET['order'] == 'antiguos' ? 'selected' : '' ?>>Más antiguos</option>
         </select>
     </div>
 
     <div id="postsContainer">
         <?php
-        session_start();
-        require_once '../models/establecerConexión.php';
-
-        // Recuperar publicaciones de la base de datos
-        $sql = "SELECT usuario_nombre, contacto, descripcion, imagen, fecha_publicacion FROM publicaciones ORDER BY fecha_publicacion DESC";
-        $result = $conn->query($sql);
-
         if ($result->num_rows > 0) {
             // Salida de datos para cada fila
             while ($row = $result->fetch_assoc()) {
@@ -50,9 +71,7 @@
 
         $conn->close();
         ?>
-
     </div>
-</div>
 </div>
 
 <!-- Modal para nueva publicación -->
@@ -70,14 +89,14 @@
             <button type="submit">Publicar</button>
         </form>
     </div>
-
 </div>
 
-
 <script src="../controllers/script.js"></script>
-
-</body>
-
-
+<script>
+    function sortPosts() {
+        const sortValue = document.getElementById('sort').value;
+        window.location.href = 'animales-perdidos.php?order=' + sortValue;
+    }
+</script>
 
 </html>

@@ -23,9 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$username', '$contactNumber', '$description', '$imgContent', CURRENT_TIMESTAMP)";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Nueva publicación creada con éxito";
+        $_SESSION['success_message'] = "La publicación ha sido creada con éxito";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        $_SESSION['error_message'] = "Error: " . $sql . "<br>" . $conn->error;
     }
 
     $conn->close();
