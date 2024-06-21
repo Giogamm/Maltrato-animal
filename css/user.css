@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: grid;
+    align-content: center;
+    justify-items: center; /* Centra horizontalmente el contenido dentro de las celdas de la cuadrícula */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 40px;
+    width: 80%;
+    max-width: 800px;
+    margin-left: auto; /* Centra horizontalmente el contenedor */
+    margin-right: auto; /* Centra horizontalmente el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container .profile-pic {
+    height: 120px;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+.user-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+h2 {
+    text-align: center;
+    color: #555555;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #007bff; /* Azul más intenso */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all .3s ease-in-out;
+    color: white;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #009688; /* Verde menta */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all .3s ease-in-out;
+}
+
+button:hover {
+    background-color: #00796b; /* Verde más oscuro */
+}

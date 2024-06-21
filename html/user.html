@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="../../css/user.css"> <!-- Asegúrate de que la ruta sea correcta -->
+</head>
+
+<body>
+    <a href="../../index.php">
+        <img src="../../img/salida.svg" alt="" class="user-icon">
+    </a>
+
+<main>
+    <div class="container">
+        <header>
+            <h1>Editar Perfil</h1>
+
+        </header>
+        <div class="profile-selection">
+            <h1>Foto de perfil actual</h1>
+            <img src="../img/animal maltratado, 1.svg" alt="" class="img">
+
+        </div>
+
+        <div class="upload-section">
+            <h2>Subir Nueva Foto de Perfil</h2>
+            <form action="user.php" method="POST" enctype="multipart/form-data">
+                <label for="profilePhoto">Seleccionar Imagen:</label>
+                <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*" required style="display: none;">
+                <label for="profilePhoto" class="custom-file-upload">Seleccionar archivo</label>
+                <button type="submit">Actualizar Foto de Perfil</button>
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+
+</html>

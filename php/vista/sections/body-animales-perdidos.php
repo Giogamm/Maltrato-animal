@@ -5,17 +5,28 @@ if (session_status() == PHP_SESSION_NONE) {
 
 require_once '../models/establecerConexión.php';
 
-// Obtener el parámetro de ordenamiento
-$order = isset($_GET['order']) ? $_GET['order'] : 'recientes';
-$orderQuery = $order === 'antiguos' ? 'ORDER BY fecha_publicacion ASC' : 'ORDER BY fecha_publicacion DESC';
-
-$query = "SELECT usuario_nombre, contacto, descripcion, imagen, fecha_publicacion FROM publicaciones $orderQuery";
-$result = $conn->query($query);
+// Obtener la foto de perfil actual del usuario logueado
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
+$currentPhoto = '';
+if ($username) {
+    $sql = "SELECT foto_perfil FROM usuarios WHERE nombre='$username'";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $currentPhoto = base64_encode($row['foto_perfil']);
+    }
+}
 ?>
 
 <div class="container">
-    <a href="../user.php">
-        <img src="../../img/userIcon.svg" alt="" class="user-icon">
+    <a href="user.php">
+        <?php
+        if ($currentPhoto) {
+            echo '<img src="data:image/jpeg;base64,' . $currentPhoto . '" alt="Foto de Perfil" class="user-icon">';
+        } else {
+            echo '<img src="../../img/userIcon.svg" alt="Foto de Perfil" class="user-icon">'; // Imagen de perfil por defecto
+        }
+        ?>
     </a>
 
     <header>
@@ -48,14 +59,23 @@ $result = $conn->query($query);
 
     <div id="postsContainer">
         <?php
+        $order = isset($_GET['order']) ? $_GET['order'] : 'recientes';
+        $orderQuery = $order === 'antiguos' ? 'ORDER BY fecha_publicacion ASC' : 'ORDER BY fecha_publicacion DESC';
+        $query = "SELECT p.usuario_nombre, p.contacto, p.descripcion, p.imagen, p.fecha_publicacion, u.foto_perfil 
+                  FROM publicaciones p 
+                  JOIN usuarios u ON p.usuario_nombre = u.nombre 
+                  $orderQuery";
+        $result = $conn->query($query);
+
         if ($result->num_rows > 0) {
             // Salida de datos para cada fila
             while ($row = $result->fetch_assoc()) {
                 $dateTime = new DateTime($row['fecha_publicacion']);
                 $formattedDate = $dateTime->format('d-m-y h:i A');
+                $profilePhoto = $row['foto_perfil'] ? 'data:image/jpeg;base64,' . base64_encode($row['foto_perfil']) : '../../img/person.svg';
                 echo "<div class='post'>";
                 echo "<div class='user-info'>";
-                echo '<img src="../../img/person.svg" class="profile-pic" alt="Usuario">'; // Ajusta esta ruta a la imagen de perfil por defecto
+                echo '<img src="' . $profilePhoto . '" class="profile-pic" alt="Usuario">';
                 echo "<div class='user-details'>";
                 echo "<h3>{$row['usuario_nombre']}</h3>";
                 echo "<p>Publicado el: {$formattedDate}</p>";
