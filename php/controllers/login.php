@@ -25,27 +25,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
 
-    // Verificar la contraseña
-    if ($user && $password === $user['contraseña']) {  // Comparar directamente
-        // Iniciar la sesión y redirigir al usuario
+    
+    if ($user && $password === $user['contraseña']) {
+        session_start();
         $_SESSION['username'] = $user['nombre'];
-        echo "<script>
-            document.getElementById('noti').style.display = 'block';
-            document.getElementById('noti').innerHTML = 'Has ingresado con éxito';
-            setTimeout(function() {
-                location.href = '../../index.php';
-            }, 2000);
-        </script>";
+        echo "success"; // Simplemente devuelve un mensaje de éxito
     } else {
-        // Si la contraseña es incorrecta, mandar un mensaje de error
-        echo "<script>
-            window.onload = function() {
-                document.getElementById('noti').style.display = 'block';
-                document.getElementById('noti').style.color = '#ffffff';
-                document.getElementById('noti').style.backgroundColor = '#811d1d';
-                document.getElementById('noti').innerHTML = 'El usuario o contraseña es incorrecta';
-            }
-        </script>";
+        http_response_code(401); // Opcional: devuelve un código de estado HTTP para indicar error
+        echo "El usuario o contraseña es incorrecta";
     }
 
     $stmt->close();

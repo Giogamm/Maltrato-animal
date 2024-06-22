@@ -50,11 +50,11 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <title>Editar Perfil</title>
-    <link rel="stylesheet" href="../../css/user.css"> 
+    <link rel="stylesheet" href="../../css/user.css">
 </head>
 
-<body> <a href="../../index.php">
-        <img src="../../img/salida.svg" alt="" class="user-icon">
+<body> <a href="../vista/animales-perdidos.php">
+        <img src="../../img/salida.svg" alt="" class="user-icon salida">
     </a>
     <div class="container">
         <header>
@@ -89,9 +89,17 @@ $conn->close();
                 <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*" required style="display: none;">
                 <label for="profilePhoto" class="custom-file-upload">Seleccionar archivo</label>
                 <button type="submit">Actualizar Foto de Perfil</button>
+                <span id="file-name"></span>
             </form>
         </div>
     </div>
 </body>
+
+<script>
+    document.getElementById('profilePhoto').addEventListener('change', function() {
+        var fileName = this.files[0].name;
+        document.getElementById('file-name').textContent = "foto seleccionada: " + fileName;
+    });
+</script>
 
 </html>

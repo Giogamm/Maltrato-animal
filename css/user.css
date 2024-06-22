@@ -12,15 +12,15 @@ body {
 .container {
     display: grid;
     align-content: center;
-    justify-items: center; /* Centra horizontalmente el contenido dentro de las celdas de la cuadrícula */
+    justify-items: center;
     background-color: #ffffff;
     padding: 30px;
     border-radius: 15px;
     margin-top: 40px;
     width: 80%;
     max-width: 800px;
-    margin-left: auto; /* Centra horizontalmente el contenedor */
-    margin-right: auto; /* Centra horizontalmente el contenedor */
+    margin-left: auto;
+    margin-right: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -78,4 +78,60 @@ button {
 
 button:hover {
     background-color: #00796b; /* Verde más oscuro */
+}
+
+span{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .container .profile-pic {
+        height: 100px;
+    }
+    
+    .custom-file-upload, button {
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem; /* Aumenta el tamaño de fuente */
+    }
+    
+    h2 {
+        font-size: 1.5rem; /* Aumenta el tamaño de fuente */
+    }
+    
+    .container .profile-pic {
+        height: 100px;
+    }
+    
+    .user-icon {
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+    }
+    
+    .custom-file-upload, button {
+        padding: 10px 15px; /* Aumenta el padding */
+        font-size: 1rem; /* Aumenta el tamaño de fuente */
+    }
+    
+    span {
+        font-size: 1rem; /* Aumenta el tamaño de fuente */
+    }
 }
