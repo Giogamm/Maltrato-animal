@@ -1,137 +1,152 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #f0f2f5;
-    font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  font-family: "Arial", sans-serif;
 }
 
 .container {
-    display: grid;
-    align-content: center;
-    justify-items: center;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    margin-top: 40px;
-    width: 80%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 40px;
+  width: 80%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .container .profile-pic {
-    height: 120px;
-    border-radius: 15px;
-    display: block;
-    margin: 0 auto;
+  height: 120px;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
 }
 
 .user-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333333;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333333;
 }
 
 h2 {
-    text-align: center;
-    color: #555555;
+  text-align: center;
+  color: #555555;
 }
 
 .custom-file-upload {
-    display: inline-block;
-    padding: 8px 16px;
-    cursor: pointer;
-    background-color: #007bff; /* Azul más intenso */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: all .3s ease-in-out;
-    color: white;
+  display: inline-block;
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #007bff; /* Azul más intenso */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+  color: white;
 }
 
 .custom-file-upload:hover {
-    background-color: #0056b3; /* Azul más oscuro */
+  background-color: #0056b3; /* Azul más oscuro */
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #009688; /* Verde menta */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: all .3s ease-in-out;
+  padding: 10px 20px;
+  background-color: #009688; /* Verde menta */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #00796b; /* Verde más oscuro */
+  background-color: #00796b; /* Verde más oscuro */
 }
 
-span{
-    display: block;
-    text-align: center;
-    margin-top: 10px;
+span {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.alert {
+  padding: 15px;
+  background-color: #4caf50;
+  color: white;
+  margin-bottom: 15px;
+}
+.error {
+  padding: 15px;
+  background-color: #f44336;
+  color: white;
+  margin-bottom: 15px;
 }
 
 /* Media queries para responsividad */
 @media (max-width: 768px) {
-    .container {
-        width: 90%;
-        padding: 20px;
-    }
-    
-    .container .profile-pic {
-        height: 100px;
-    }
-    
-    .custom-file-upload, button {
-        padding: 8px 12px;
-    }
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .container .profile-pic {
+    height: 100px;
+  }
+
+  .custom-file-upload,
+  button {
+    padding: 8px 12px;
+  }
 }
 
 @media (max-width: 480px) {
-    .container {
-        width: 95%;
-        padding: 20px;
-    }
-    
-    h1 {
-        font-size: 1.8rem; /* Aumenta el tamaño de fuente */
-    }
-    
-    h2 {
-        font-size: 1.5rem; /* Aumenta el tamaño de fuente */
-    }
-    
-    .container .profile-pic {
-        height: 100px;
-    }
-    
-    .user-icon {
-        width: 45px;
-        height: 45px;
-        margin-right: 10px;
-    }
-    
-    .custom-file-upload, button {
-        padding: 10px 15px; /* Aumenta el padding */
-        font-size: 1rem; /* Aumenta el tamaño de fuente */
-    }
-    
-    span {
-        font-size: 1rem; /* Aumenta el tamaño de fuente */
-    }
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Aumenta el tamaño de fuente */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Aumenta el tamaño de fuente */
+  }
+
+  .container .profile-pic {
+    height: 100px;
+  }
+
+  .user-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+  }
+
+  .custom-file-upload,
+  button {
+    padding: 10px 15px; /* Aumenta el padding */
+    font-size: 1rem; /* Aumenta el tamaño de fuente */
+  }
+
+  span {
+    font-size: 1rem; /* Aumenta el tamaño de fuente */
+  }
 }
