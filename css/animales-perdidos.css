@@ -215,6 +215,19 @@ button:hover {
     margin-right: 15px;
 }
 
+.post button {
+    background-color: #ff4d4d; /* Rojo */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s ease-in-out;
+}
+
+.post button:hover {
+    background-color: #ff1a1a; /* Rojo más oscuro */
+}
 /* Responsivo */
 @media (max-width: 768px) {
     .container {

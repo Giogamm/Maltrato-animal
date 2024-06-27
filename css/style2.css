@@ -155,12 +155,23 @@ height: 90px;
     color: white;
 }
 
+
+.video{
+  display: grid;
+  place-content: center;
+  padding-bottom: 10px;
+}
+
 /* 
 !mediaquerys
 */
 
 @media screen and (max-width: 768px) {
 
+  .video iframe{
+    height: 220px;
+    width: 320px;
+  }
 
  .empuje{
   display: none;
