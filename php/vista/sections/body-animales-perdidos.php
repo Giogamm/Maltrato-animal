@@ -61,10 +61,10 @@ if ($username) {
         <?php
         $order = isset($_GET['order']) ? $_GET['order'] : 'recientes';
         $orderQuery = $order === 'antiguos' ? 'ORDER BY fecha_publicacion ASC' : 'ORDER BY fecha_publicacion DESC';
-        $query = "SELECT p.usuario_nombre, p.contacto, p.descripcion, p.imagen, p.fecha_publicacion, u.foto_perfil 
-                  FROM publicaciones p 
-                  JOIN usuarios u ON p.usuario_nombre = u.nombre 
-                  $orderQuery";
+        $query = "SELECT p.id, p.usuario_nombre, p.contacto, p.descripcion, p.imagen, p.fecha_publicacion, u.foto_perfil 
+        FROM publicaciones p 
+        JOIN usuarios u ON p.usuario_nombre = u.nombre 
+        $orderQuery";
         $result = $conn->query($query);
 
         if ($result->num_rows > 0) {
@@ -83,11 +83,18 @@ if ($username) {
                 echo "</div>";  // Close user-info
                 echo "<img src='data:image/jpeg;base64," . base64_encode($row['imagen']) . "' alt='Animal Picture' class='animal-pic'>";
                 echo "<p class='description'>{$row['descripcion']}</p>";
+                if ($row['usuario_nombre'] === $username) {
+                    echo "<form action='../controllers/eliminarPublicaciones.php' method='POST'>";
+                    echo "<input type='hidden' name='post_id' value='{$row['id']}'>";
+                    echo "<button type='submit' class='delete-button'>Eliminar</button>";
+                    echo "</form>";
+                }
                 echo "</div>";  // Close post
             }
         } else {
             echo "No hay publicaciones.";
         }
+
 
         $conn->close();
         ?>
